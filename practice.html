@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - LovatoEnterprise</title>
+    <style>
+                *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+ 
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0; 
+            box-sizing: border-box;
+            background-image: url("2.jpg");
+            
+        }
+        .container {
+            text-align: center;
+            box-sizing: border-box;
+            border: 1px solid black;
+            padding: 25px;
+            margin: 10px;
+            border-radius: 4px;
+            width: 50%;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            margin-left: 10px;
+            background-image: url("2.jpg");
+        }
+        .container h1 {
+            color: blue;
+            font-size: 40px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-display: initial;
+            font-style: italic;
+        }
+        .container h2{
+            color: blue;
+            font-weight: bolder;
+            font-style: italic;
+        }
+        .another{
+            background-color:  #1E90FF;
+            padding: 8px;
+            margin-top: 5px;
+
+        }
+        .container input[type="text"]{
+            margin-bottom: 5px;
+            padding: 4px;
+
+
+        }
+        .container input[type="submit"]{
+            color: white;
+            background-color: black;
+        }
+        .container input[type="submit"]:hover{
+            color: blue;
+        }
+        .container input[type="password"]{
+            padding: 4px;
+            margin-bottom:5px ;
+        }
+        .container a {
+            color: blue;
+        }
+        button{
+            padding: 4px;
+            width: 30%;
+            background-color:black ;
+            color: white;
+        }
+        button:hover{
+            color: blue;
+        }
+        .form{
+            box-sizing: border-box;
+            border: 1px solid black;
+            border-radius: 4px;
+            margin-top: 10px;
+            padding: 5px;
+            background-color: #1E90FF;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><b>LovatoEnterprise</b></h1>
+        <h2>Welcome</h2>
+        <!-- Redirects to dashboard.html after submission -->
+         <div class="form">
+            <form action="another.html" method="get">
+                <input type="text" id="name" placeholder="Username" required><br>
+                <input type="password" id="pass" placeholder="Password" required><br>
+                <input type="checkbox" id="rad">
+                <label for="rad">Remember my Username</label>
+                <br>
+                <br>
+                <button type="submit">Log in</button>
+                <br>
+                <a href="#">Forgot username or password?</a>
+            </form>
+         </div>
+
+        <div class="another">
+            <div>New to LovatoEnterprise</div>
+            <div><a href="#">Open an account or sign up</a></div>
+            <div><a href="#">Security</a></div>
+            <div><a href="#">FAQs</a></div>
+        </div>
+    </div>
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            const username = document.getElementById('name').value;
+            const password = document.getElementById('pass').value;
+            
+            if (username === 'VINCENT' && password === '9133') {
+                // Allow form submission to dashboard.html
+            } else {
+                alert('Invalid credentials');
+                event.preventDefault(); // Stop form submission
+            }
+        });
+    </script>
+    
+</body>
+</html>
